@@ -1,22 +1,22 @@
 /****
-* Título:Labirinto Do Minotauro
+* Tï¿½tulo:Labirinto Do Minotauro
 
 * Autor:Gabriel Santos De Souza
 
-* Data de Criação:19/06/2016
+* Data de Criaï¿½ï¿½o:19/06/2016
 
-* Última modificação: 26/07/2016
+* ï¿½ltima modificaï¿½ï¿½o: 08/05/2018
 
-* Descrição: Programa que encontra um caminho que leve o guerreiro de uma posição inicial
-qualquer a uma saída do labirinto, caso exista, se durante o percurso o guerreiro encontra o Minotauro
+* Descriï¿½ï¿½o: Programa que encontra um caminho que leve o guerreiro de uma posiï¿½ï¿½o inicial
+qualquer a uma saï¿½da do labirinto, caso exista, se durante o percurso o guerreiro encontra o Minotauro
 a caminhada termina com a morte do guerreiro.
 
-* Entrada: Como entrada um arquivo texto que na primeira linha contem a posição inicial do guerreiro no
- labirinto (lg, cg), na segunda linha a posição do Minotauro (lm, cm), na terceira a dimensão do labirinto n,
+* Entrada: Como entrada um arquivo texto que na primeira linha contem a posiï¿½ï¿½o inicial do guerreiro no
+ labirinto (lg, cg), na segunda linha a posiï¿½ï¿½o do Minotauro (lm, cm), na terceira a dimensï¿½o do labirinto n,
  e logo a matriz de inteiros com a estrutura do labirinto.
 
-* Saída: Um arquivo de saída mostrando o percurso realizado (todos os passos do guerreiro e do minotauro), o caminho até a saída, ou
-uma mensagem informando que o caminho não existe, ou que o guerreiro morreu.
+* Saï¿½da: Um arquivo de saï¿½da mostrando o percurso realizado (todos os passos do guerreiro e do minotauro), o caminho atï¿½ a saï¿½da, ou
+uma mensagem informando que o caminho nï¿½o existe, ou que o guerreiro morreu.
 
 ****/
 
@@ -33,60 +33,60 @@ typedef struct{
 }Guerreiro; /*Coordenadas do guerreiro */
 
 /****
-* Título: Apresenta
+* Tï¿½tulo: Apresenta
 
 * Autor: Gabriel Santos
 
-* Data de Criação: 26/07/2016
+* Data de Criaï¿½ï¿½o: 26/07/2016
 
-* Última modificação: 27/07/2016
+* ï¿½ltima modificaï¿½ï¿½o: 27/07/2016
 
-* Descrição: função responsavel por apresentar a interface de usuario.
+* Descriï¿½ï¿½o: funï¿½ï¿½o responsavel por apresentar a interface de usuario.
 
-* Parâmetros:
+* Parï¿½metros:
    int **: matriz(labirinto).
    Minotauro: Coordenadas do Minotauro.
    Guerreiro: Coordenadas do Guerreiro.
-   const int: Dimensão da matriz.
+   const int: Dimensï¿½o da matriz.
 
-* Valor de retorno: A função retorna a matriz alocada.
+* Valor de retorno: A funï¿½ï¿½o retorna a matriz alocada.
 
 ****/
 void Apresenta(int**, const int, Minotauro*, Guerreiro* );
 
 /****
-* Título: Aloca_Matriz
+* Tï¿½tulo: Aloca_Matriz
 
 * Autor: Gabriel Santos
 
-* Data de Criação: 19/06/2016
+* Data de Criaï¿½ï¿½o: 19/06/2016
 
-* Última modificação: 19/06/2016
+* ï¿½ltima modificaï¿½ï¿½o: 19/06/2016
 
-* Descrição: função responsavel por alocar a matriz dinamicamente.
+* Descriï¿½ï¿½o: funï¿½ï¿½o responsavel por alocar a matriz dinamicamente.
 
-* Parâmetros:
-   const int : é a dimensão da matriz.
+* Parï¿½metros:
+   const int : ï¿½ a dimensï¿½o da matriz.
 
-* Valor de retorno: A função retorna a matriz alocada.
+* Valor de retorno: A funï¿½ï¿½o retorna a matriz alocada.
 
 ****/
 int** Aloca_Matriz(const int);
 
 /****
 *
-* Título: Le_Matriz
+* Tï¿½tulo: Le_Matriz
 *
 * Autor: Gabriel Santos
 
-* Data de Criação:  19/06/2016
-* Última modificação:  19/06/2016
+* Data de Criaï¿½ï¿½o:  19/06/2016
+* ï¿½ltima modificaï¿½ï¿½o:  19/06/2016
 
-* Descrição: A função lê e verifica o número de discos a serem usados para resolver o problema em questão.
+* Descriï¿½ï¿½o: A funï¿½ï¿½o lï¿½ e verifica o nï¿½mero de discos a serem usados para resolver o problema em questï¿½o.
 
-* Parâmetros:
-   (entrada/saída)
-           FILE:   É um ponteiro que aponta aqruivo.
+* Parï¿½metros:
+   (entrada/saï¿½da)
+           FILE:   ï¿½ um ponteiro que aponta aqruivo.
            int**: labirinto.
            int: tamanho no labirinto.
 
@@ -96,17 +96,17 @@ void Le_Matriz(FILE * ,int**,int );
 
 /****
 *
-* Título: Imprimir_Labirinto
+* Tï¿½tulo: Imprimir_Labirinto
 
 * Autor: Gabriel Santos
 
-* Data de Criação:  19/06/2016
-* Última modificação:  19/06/2016
+* Data de Criaï¿½ï¿½o:  19/06/2016
+* ï¿½ltima modificaï¿½ï¿½o:  19/06/2016
 
-* Descrição: A função imprimi o labirinto com seu caracteres especiais.
+* Descriï¿½ï¿½o: A funï¿½ï¿½o imprimi o labirinto com seu caracteres especiais.
 
-* Parâmetros:
-   (entrada/saída)
+* Parï¿½metros:
+   (entrada/saï¿½da)
            int**: Matriz (labirinto).
            const int: tamanho da matriz.
 
@@ -118,17 +118,17 @@ void Imprimir_Labirinto(int**,const int);
 
 /****
 *
-* Título: Mov_Guerreiro
+* Tï¿½tulo: Mov_Guerreiro
 *
 * Autor: Gabriel Santos
 
-* Data de Criação: 12/07/2016
-* Última modificação:25/07/2016
+* Data de Criaï¿½ï¿½o: 12/07/2016
+* ï¿½ltima modificaï¿½ï¿½o:25/07/2016
 
-* Descrição: A função fica encarregada dos movimentos do guerreiro quando chamada.
+* Descriï¿½ï¿½o: A funï¿½ï¿½o fica encarregada dos movimentos do guerreiro quando chamada.
 
-* Parâmetros:
-   (entrada/saída)
+* Parï¿½metros:
+   (entrada/saï¿½da)
            int**: matriz.
            int: tamanho da matriz.
            Guerreiro *: coordenadas do guerreiro.
@@ -140,17 +140,17 @@ void Mov_Guerreiro(int** ,const int ,Guerreiro *);
 
 /****
 *
-* Título: Mov_Minotauro
+* Tï¿½tulo: Mov_Minotauro
 *
 * Autor: Gabriel Santos
 
-* Data de Criação:  19/06/2016
-* Última modificação:  19/06/2016
+* Data de Criaï¿½ï¿½o:  19/06/2016
+* ï¿½ltima modificaï¿½ï¿½o:  19/06/2016
 
-* Descrição: A função fica encarregada de movimentar o minotauro quando chamada.
+* Descriï¿½ï¿½o: A funï¿½ï¿½o fica encarregada de movimentar o minotauro quando chamada.
 
-* Parâmetros:
-   (entrada/saída)
+* Parï¿½metros:
+   (entrada/saï¿½da)
            int **: matriz.
            const int: tamanho da matriz.
            Minotauro *: coordenadas do minotauro.
@@ -163,18 +163,18 @@ void Mov_Minotauro(int** ,const int ,Minotauro *);
 
 /****
 *
-* Título: Mov_PasAnter
+* Tï¿½tulo: Mov_PasAnter
 *
 * Autor: Gabriel Santos
 
-* Data de Criação: 25/07/2016
-* Última modificação:26/07/2016
+* Data de Criaï¿½ï¿½o: 25/07/2016
+* ï¿½ltima modificaï¿½ï¿½o:26/07/2016
 
-* Descrição: função responsavel pelo retorno do guerreiro caso, não tenha mais caminho livre.
+* Descriï¿½ï¿½o: funï¿½ï¿½o responsavel pelo retorno do guerreiro caso, nï¿½o tenha mais caminho livre.
 
 
-* Parâmetros:
-   (entrada/saída)
+* Parï¿½metros:
+   (entrada/saï¿½da)
            int **: matriz.
            const int: tamanho da matriz.
            Minotauro *: coordenadas do guerreiro.
@@ -185,18 +185,18 @@ void Mov_PasAnter(int**,const int,Guerreiro*);
 
 /****
 *
-* Título: Liberar_Memoria
+* Tï¿½tulo: Liberar_Memoria
 *
 * Autor: Gabriel Santos
 *
-* Data de Criação: 19/07/2016
-* Última modificação: 19/07/2016
+* Data de Criaï¿½ï¿½o: 19/07/2016
+* ï¿½ltima modificaï¿½ï¿½o: 19/07/2016
 *
-* Descrição: Libera uma matriz alocada dinamicamente.
+* Descriï¿½ï¿½o: Libera uma matriz alocada dinamicamente.
 *
-* Parâmetros:
+* Parï¿½metros:
 *   (entrada)
-*           int **: Ponteiro que aponta para a matriz que foi alocada e definida na função Liberar_Memoria.
+*           int **: Ponteiro que aponta para a matriz que foi alocada e definida na funï¿½ï¿½o Liberar_Memoria.
 *           const int: tamanho da matriz.
 *
 * Valor de retorno: void.
@@ -206,16 +206,16 @@ void Liberar_Memoria(int**,const int);
 
 /****
 *
-* Título: Gravar_arquivo
+* Tï¿½tulo: Gravar_arquivo
 *
 * Autor: Gabriel Santos
 *
-* Data de Criação:
-* Última modificação:
+* Data de Criaï¿½ï¿½o:
+* ï¿½ltima modificaï¿½ï¿½o:
 *
-* Descrição: Grava no arquivo de saida, o resultado do jogo.
+* Descriï¿½ï¿½o: Grava no arquivo de saida, o resultado do jogo.
 *
-* Parâmetros:
+* Parï¿½metros:
 *   (entrada)
 *           int**: matriz.
            const int tamanho da matriz.
@@ -239,16 +239,16 @@ int main()
         }
     fscanf(arquivo,"%d %d", &g.lg, &g.cg); //Lendo as coordenadas iniciais do guerreiro
     fscanf(arquivo,"%d %d", &m.lm, &m.cm); //Lendo as coordenadas iniciais do minotauro
-    fscanf(arquivo,"%d", &n); //Lendo a dimensão do labirinto
-    //construção do labirinto
+    fscanf(arquivo,"%d", &n); //Lendo a dimensï¿½o do labirinto
+    //construï¿½ï¿½o do labirinto
     labirinto = Aloca_Matriz(n);
     Le_Matriz(arquivo, labirinto, n);
     fclose(arquivo);
 
-    //DEFININDO A POSIÇÃO DO MINOTAURO E GUERREIRO
+    //DEFININDO A POSIï¿½ï¿½O DO MINOTAURO E GUERREIRO
     labirinto[g.lg][g.cg] = 3; /*Guerreiro*/
     labirinto[m.lm][m.cm] = 2; /*Minotauro*/
-    //A SAIDA É REPRESENTADA COMO 8 NA MATRIZ
+    //A SAIDA ï¿½ REPRESENTADA COMO 8 NA MATRIZ
     Apresenta(labirinto,n,&m,&g);
     while(g.cg < n || g.lg < n ){
          //VERIFICAR SE O GUERREIRO ENCONTROU A SAIDA
@@ -256,7 +256,7 @@ int main()
                 printf("O GUERREIRO ENCONTROU A SAIDA!!");
                 return -1;
                 }
-         //Se não houver mais caminho livre
+         //Se nï¿½o houver mais caminho livre
          if(labirinto[g.lg+1][g.cg] != 1 && labirinto[g.lg][g.cg+1] != 1 && labirinto[g.lg][g.cg-1] != 1 && labirinto[g.lg-1][g.cg] != 1){
 
              if(labirinto[g.lg+1][g.cg] == 2 || labirinto[g.lg][g.cg+1] == 2 || labirinto[g.lg][g.cg-1] == 2 || labirinto[g.lg-1][g.cg] == 2){
@@ -286,19 +286,19 @@ int main()
 void Apresenta(int **labirinto , const int n,Minotauro *m, Guerreiro*g ){
      printf("********************LABIRINTO DO MINOTAURO************************\n");
      printf("Bem-Vindo ao programa labirinto do minotauro\n");
-     printf("\nImforções: \n  O programa labirinto do minotauro, encontra um caminho que leve um guerreiro\n"
-             "de uma posição inicial a uma saída do labirinto, caso exista.\n"
-             "  Uma saída é uma posição livre na borda da matriz que define o labirinto,\n"
+     printf("\nImforï¿½ï¿½es: \n  O programa labirinto do minotauro, encontra um caminho que leve um guerreiro\n"
+             "de uma posiï¿½ï¿½o inicial a uma saï¿½da do labirinto, caso exista.\n"
+             "  Uma saï¿½da ï¿½ uma posiï¿½ï¿½o livre na borda da matriz que define o labirinto,\n"
              "se durante o percurso o guerreiro encontra o Minotauro"
-             " a caminhada termina\ncom a morte do guerreiro.\n O labirinto é composto por:\n @ -> Guerreiro \n & -> Minotauro \n + -> Parede\n");
-     printf("Lg:  %d  Cg: %d\n", g->lg + 1, g->cg + 1); /*Posição inicial do guerreiro*/
-     printf("Lm:  %d  Cm: %d\n", m->lm + 1, m->cm + 1);/*Posição inicial do  minotauro*/
-     printf("Dimensão: %d\n",n);
+             " a caminhada termina\ncom a morte do guerreiro.\n O labirinto ï¿½ composto por:\n @ -> Guerreiro \n & -> Minotauro \n + -> Parede\n");
+     printf("Lg:  %d  Cg: %d\n", g->lg + 1, g->cg + 1); /*Posiï¿½ï¿½o inicial do guerreiro*/
+     printf("Lm:  %d  Cm: %d\n", m->lm + 1, m->cm + 1);/*Posiï¿½ï¿½o inicial do  minotauro*/
+     printf("Dimensï¿½o: %d\n",n);
      printf("Precione qualquer tecla para iniciar a jornada do guerreiro\n");
      system("pause");
 }
 
-//FUNÇÃO RESPONSÁVEL POR ALOCAR DINAMICAMENTE A MATRIZ
+//FUNï¿½ï¿½O RESPONSï¿½VEL POR ALOCAR DINAMICAMENTE A MATRIZ
 int** Aloca_Matriz(const int n){
     int i, **matriz;
     matriz = malloc( n * sizeof( int*));
@@ -314,7 +314,7 @@ int** Aloca_Matriz(const int n){
         }
     }
     return matriz;
-}/*Fim da função*/
+}/*Fim da funï¿½ï¿½o*/
 
 void Le_Matriz( FILE *arquivo, int **labirinto, int n ){
   int i, j;
@@ -348,7 +348,7 @@ void Imprimir_Labirinto( int **matriz, const int n){
         printf("\n");
     }
     printf("\n");*/
-}/*Fim da função*/
+}/*Fim da funï¿½ï¿½o*/
 
 //MOVIMENTOS DO GUERREIRO
 void Mov_Guerreiro(int **labirinto , int n, Guerreiro *g ){
@@ -388,9 +388,9 @@ void Mov_Guerreiro(int **labirinto , int n, Guerreiro *g ){
         }
 
 
-}/*Fim da função Mov_Guerreiro*/
+}/*Fim da funï¿½ï¿½o Mov_Guerreiro*/
 
-//função para quando o guerreiro se deparar com a parede
+//funï¿½ï¿½o para quando o guerreiro se deparar com a parede
 void Mov_PasAnter(int **labirinto , const int n, Guerreiro *g){
 
         //esquerda
@@ -423,7 +423,7 @@ void Mov_PasAnter(int **labirinto , const int n, Guerreiro *g){
             g->lg--;
         }
 
-}/*Fim da função*/
+}/*Fim da funï¿½ï¿½o*/
 
 //MOVIMENTOS DO MINOTAURO
 void Mov_Minotauro(int **labirinto, const int n, Minotauro *m){
@@ -466,14 +466,14 @@ void Mov_Minotauro(int **labirinto, const int n, Minotauro *m){
 
 
 
-}/*Fim da função*/
+}/*Fim da funï¿½ï¿½o*/
 void Gravar_arquivo(int **labirinto, const int n){
      int i,j;
      FILE *arquivSaida;
      //abrir o arquivo
      if((arquivSaida = fopen("saida.txt", "w")) == NULL){
         printf("erro ao abrir o arquivo");
-        return -1;
+        exit (1);
     }
      for(i = 0; i < n; i++){
         for(j = 0; j < n; j++)
@@ -481,14 +481,12 @@ void Gravar_arquivo(int **labirinto, const int n){
      fprintf(arquivSaida,"\n");
     }
     fclose(arquivSaida);
-}/*Fim da função*/
+}/*Fim da funï¿½ï¿½o*/
 
-//FUNÇÃO PARA LIBERAR A MEMORIA
+//FUNï¿½ï¿½O PARA LIBERAR A MEMORIA
 void Liberar_Memoria(int **labirinto, const int n){
     int i;
     for(i = 0; i < n; i++)
         free(labirinto[i]);
     free(labirinto);
 }
-
-
